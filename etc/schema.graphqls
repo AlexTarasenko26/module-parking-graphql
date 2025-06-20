@@ -1,0 +1,17 @@
+type Query {
+    getProductParkingZone(input: StringInput): ParkingZone
+        @resolver(class: "Epam\\ParkingGraphQl\\Model\\Resolver\\GetProductParkingZone")
+        @doc(description: "Find parking zone by product SKU")
+        @cache(cacheIdentity: "Epam\\ParkingGraphQl\\Model\\Resolver\\Identity")
+}
+
+input StringInput @doc(description: "Product SKU") {
+    sku: String
+}
+
+type ParkingZone @doc(description: "Parking zone") {
+    id: Int!
+    name: String!
+    location: String
+    max_capacity: Int
+}

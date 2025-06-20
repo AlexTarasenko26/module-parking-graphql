@@ -1,0 +1,17 @@
+{
+    "name": "epam/module-parking-graphql",
+    "description": "GraphQL support for Epam Parking",
+    "type": "magento2-module",
+    "require": {
+        "php": ">=7.4",
+        "magento/framework": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Epam\\ParkingGraphQl\\": ""
+        }
+    }
+}
